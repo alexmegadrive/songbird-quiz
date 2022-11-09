@@ -9,14 +9,18 @@ htmlService.renderLevel()
 
 document.body.addEventListener('click', function (event) {
     if (event.target.classList.contains('options__list-item')) {
-        htmlService.handleSelectOption(event.target.dataset.option)
+        gameService.handleSelectOption(event.target.dataset.option)
         // console.log('event.target.dataset.option :', event.target.dataset.option);
     }
     if (event.target.dataset?.controls == 'nextLevel') {
         // console.log('next')
-        htmlService.handleNextLevel()
+        gameService.handleNextLevel()
     }
 })
 
-
-console.log('generateAnswers() :', gameService.answers);
+// TODO
+// очки
+// звук при нажатии
+// стартовый и финальные экраны
+// кастомный плеер
+// галерея птиц

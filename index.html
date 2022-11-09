@@ -8,7 +8,54 @@
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    
+    <main class="container">
+        <header class="header">
+            <div class="header__top-panel">
+                <div class="logo"></div>
+            </div>
+            <ul class="progress__bar">
+            <li class="progress__item">Разминка</li>
+            <li class="progress__item">Воробьиные</li>
+            <li class="progress__item">Лесные птицы</li>
+            <li class="progress__item">Певчие птицы</li>
+            <li class="progress__item">Хищные птицы</li>
+            <li class="progress__item">Морские птицы</li>
+            </ul>
+        </header>
+     
+        <section class="quiz-question">
+
+            <!-- <img class="quiz-question__image" src="/img/unknown-bird.jpg" alt="bird">
+            <div class="quiz-question__info">
+                <h3 class="quiz-question__title">*****</h3>
+                <div class="quiz-question__audio">
+                </div>
+            </div> -->
+
+        </section>
+
+        <div class="quiz-controls">
+            <section class="options">
+                <ul class="options__list">
+                    <li class="options__list-item">
+                        1</li>
+                    <li class="options__list-item">2</li>
+                    <li class="options__list-item">3</li>
+                    <li class="options__list-item">4</li>
+                    <li class="options__list-item">5</li>
+                    <li class="options__list-item">6</li>
+                </ul>
+            </section>
+            <section class="card">
+                Прослушайте аудио и выберите вариант ответа
+                </section>
+            <button class="btn--level btn--active">Next Level</button>
+        </div>
+
+    </main>
+    <script src="./scripts/birdsData.js"></script>
+    <script src="./scripts/HTMLservice.js"></script>
+    <script src="./scripts/gameService.js"></script>
     <script src="./scripts/app.js"></script>
 </body>
 </html>

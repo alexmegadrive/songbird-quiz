@@ -27,6 +27,11 @@ body {
   display: flex;
   flex-direction: column;
 }
+.header__top-panel {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
 .logo {
   background-image: url(./img/logo.png);
@@ -90,7 +95,13 @@ body {
     gap: 1rem;
 }
 .options {
-    flex: 0 0 48%;
+    flex: 0 0 100%;
+}
+@media screen and (min-width: 992px) {
+    .options {
+        flex: 0 0 50%;
+        padding-right: 1rem;
+    }   
 }
 .options__list {
     list-style-type: none;
@@ -126,7 +137,7 @@ body {
 
 
 .card {
-    flex: 0 0 48%;
+    flex: 1;
     background-color: #303030;
     // display: flex;
     padding: 1rem;
@@ -216,5 +227,42 @@ transition: .3s;
     .container-lg,
     .container-xl {
       max-width: 1140px;
+    }
+  }
+
+  .playback-button {
+    display: flex;
+    align-items: center;
+    transition: .2s;
+    width: 40px;
+    height: 40px;
+    border: 2px solid #00bc8c;
+    justify-content: center;
+    border-radius: 50%;
+    margin-right: 20px;
+    margin-bottom: 12px;
+    cursor: pointer;
+  }
+  .playback-button svg {
+    transition: .2s;
+    width: 18px;
+    height: 18px;
+    color: #54b1c1;
+  }
+
+  .playback-button.playback-button--playing {
+    svg.playback-play {
+        display: none;
+    }
+    svg.playback-pause {
+        display: block;
+    }
+  }
+  .playback-button {
+    svg.playback-play {
+        display: block;
+    }
+    svg.playback-pause {
+        display: none;
     }
   }

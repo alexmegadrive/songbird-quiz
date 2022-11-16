@@ -8,7 +8,24 @@
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    <main class="container">
+    <div class="container" id="slide1">
+        <div class="start-container">
+            <div class="logo"></div>
+
+            <div class="start-container__description">
+                <h3>Викторина "Угадай птицу по пению"</h3>
+
+                <div>Правила просты:</div>
+                <div>- В игре 6 раундов, в каждом раунде 6 вариантов ответов.</div>
+                <div>- За каждый неправильный ответ отнимается 1 балл, за правильный ответ дается 5 баллов.</div>
+                <div>- Максимальное количество баллов - 30.</div>
+            </div>
+    
+            <button  class="btn--start" data-controls="startGame" >Начать игру</button>
+
+        </div>
+    </div>
+    <div class="container hidden">
         <header class="header">
             <div class="header__top-panel">
                 <div class="logo"></div>
@@ -47,7 +64,22 @@
             <button class="btn--level" data-controls="nextLevel">Следующий уровень</button>
         </div>
 
-    </main>
+    </div>
+    <div class="container hidden" id="slide3">
+        <div class="start-container">
+            <div class="logo"></div>
+
+            <div class="start-container__description">
+               <h3>Результаты</h3>
+               <div id="results"></div>
+            </div>
+    
+            <button  class="btn--start" data-controls="newGame" >Сыграть заново</button>
+
+
+    </div>
+
+
     <script src="./scripts/birdsData.js"></script>
     <script src="./scripts/HTMLservice.js"></script>
     <script src="./scripts/gameService.js"></script>

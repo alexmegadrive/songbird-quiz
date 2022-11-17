@@ -7,6 +7,12 @@ htmlService.renderLevel()
 
 
 document.body.addEventListener('click', function (event) {
+
+    
+    if (event.target.classList.contains('playback-progress-container')) {
+        let percent = event.offsetX/event.target.offsetWidth
+        htmlService.seekTrack(event.target.dataset.progress, percent)
+    }
     if (event.target.classList.contains('options__list-item')) {
         gameService.handleSelectOption(event.target.dataset.option)
     }

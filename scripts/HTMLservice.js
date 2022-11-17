@@ -77,7 +77,7 @@ class htmlService {
 
             <div class="playback-time" >
             <div id="question-playback-current-time">00:00</div>
-            <div class="playback-progress-container">
+            <div class="playback-progress-container" data-progress="question">
             <div id="question-playback-progress" class="playback-progress"></div>
             </div>
             <div id="question-playback-duration"></div>
@@ -124,7 +124,7 @@ class htmlService {
                
                 <div class="playback-time" >
                 <div id="card-playback-current-time">00:00</div>
-                <div class="playback-progress-container">
+                <div class="playback-progress-container" data-progress="card">
                 <div class="playback-progress" id="card-playback-progress"></div>
                 </div>
                 <div id="card-playback-duration"></div>
@@ -228,7 +228,7 @@ class htmlService {
     revealCorrectAnswer() {
         const CURRENT_LEVEL = gameService.currentLevel
         const CORRECT_ANSWER = gameService.answers[gameService.currentLevel]
-        const TITLE = document.querySelector('#question-title')
+        const TITLE = document.querySelector('.quiz-title')
         const IMAGE = document.querySelector('.quiz-question__image')
         TITLE.innerText = this.data[CURRENT_LEVEL][CORRECT_ANSWER].name
         IMAGE.src = this.data[CURRENT_LEVEL][CORRECT_ANSWER].image
@@ -260,6 +260,17 @@ class htmlService {
             AUDIO.play()
         }
         button.classList.toggle('playback-button--playing')
+    }
+
+    seekTrack(player, percent) {
+    console.log('player :', player);
+        let AUDIO
+        if (player == 'question') {
+            AUDIO = document.querySelector('#question-audio')
+        } else if (player == 'card') {
+            AUDIO = document.querySelector('#card-audio')
+        }
+        AUDIO.currentTime = AUDIO.duration * percent
     }
 
     handleStartGame() {

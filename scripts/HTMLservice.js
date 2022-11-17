@@ -183,13 +183,13 @@ class htmlService {
         let AUDIO
         if (slider.dataset.player == 'question') {
             AUDIO = document.querySelector('#question-audio')
-            AUDIO.volume = slider.value/10
+            AUDIO.volume = slider.value / 10
 
         } else if (slider.dataset.player == 'card') {
             AUDIO = document.querySelector('#card-audio')
-            AUDIO.volume = slider.value/10
+            AUDIO.volume = slider.value / 10
         }
-        
+
     }
 
     setCurrentLevelTab() {
@@ -263,7 +263,7 @@ class htmlService {
     }
 
     seekTrack(player, percent) {
-    console.log('player :', player);
+        console.log('player :', player);
         let AUDIO
         if (player == 'question') {
             AUDIO = document.querySelector('#question-audio')

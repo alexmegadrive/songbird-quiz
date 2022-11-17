@@ -193,9 +193,16 @@ h3 {
   margin: 15px 0px;
 }
 
+.card__top {
+  display: flex;
+  flex-direction: column;
+}
+.card__top-right {
+  flex: 1;
+}
 .card__image {
   display: block;
-  margin: 0 auto 25px;
+  margin: 0 20px 20px 0;
   width: 200px;
   height: 155px;
   border-radius: 10px;
@@ -330,6 +337,10 @@ h3 {
   }
   .quiz-question__info {
     width: 50%;
+  }
+  .card__top {
+    display: flex;
+    flex-direction: row;
   }
 }
 @media (min-width: 768px) {

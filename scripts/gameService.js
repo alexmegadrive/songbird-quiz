@@ -55,7 +55,6 @@ class gameService {
             this.handleWrongAnswer()
             OPTIONS[option].classList.add('options__list-item--error')
         }
-        // htmlService.renderScore()
     }
 
     handleNextLevel() {

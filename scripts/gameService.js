@@ -9,8 +9,8 @@ class gameService {
     incorrectAnswers = 0;
     levelCompleted = false;
 
-    snd_correct = new Audio('./../media/correct.mp3'); // buffers automatically when created
-    snd_wrong = new Audio('./../media/wrong.mp3'); // buffers automatically when created
+    snd_correct = new Audio('./media/correct.mp3'); // buffers automatically when created
+    snd_wrong = new Audio('./media/wrong.mp3'); // buffers automatically when created
 
 
     generateAnswers() {

@@ -53,7 +53,7 @@ class htmlService {
         // console.log('audio src', this.data[CURRENT_LEVEL][CORRECT_ANSWER].audio)
 
         QUESTION_CONTAINER.innerHTML = `
-        <img class="quiz-question__image" src="/img/unknown-bird.jpg" alt="bird">
+        <img class="quiz-question__image" src="./img/unknown-bird.jpg" alt="bird">
         <div class="quiz-question__info">
             <h3 class="quiz-title">*****</h3>
 

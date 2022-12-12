@@ -17,7 +17,7 @@ body {
   height: 100vh;
 }
 
-a:visited {
+a, a:visited {
   color: inherit;
 }
 
